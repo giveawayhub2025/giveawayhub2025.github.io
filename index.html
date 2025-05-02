@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giveaway Hub 2025 - Official $1000 Visa Giveaway</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0a1e2f, #1a3c5e);
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #1a3c5e;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 5px;
+            object-fit: contain;
+        }
+        .logo h1 {
+            font-size: 28px;
+            color: #fff;
+            margin: 0;
+            font-weight: 700;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #f1c40f;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .hero {
+            background: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+            min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 30, 47, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            color: #1a3c5e;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .hero h2 {
+            font-size: 40px;
+            margin: 0;
+            font-weight: 900;
+        }
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #2ecc71;
+        }
+        .timer {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .signup-option {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2ecc71;
+            border-radius: 5px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .signup-option:hover {
+            transform: scale(1.05);
+        }
+        .signup-option a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .global-entry-option {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #3498db;
+            border-radius: 5px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .global-entry-option:hover {
+            transform: scale(1.05);
+        }
+        .global-entry-option a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .cell {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 25px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            color: #1a3c5e;
+            position: relative;
+        }
+        .cell h3 {
+            font-size: 24px;
+            color: #2ecc71;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2ecc71;
+            padding-bottom: 5px;
+        }
+        .cell p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .testimonials {
+            background: #f9f9f9;
+            padding: 30px;
+        }
+        .group-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 20px;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .testimonial {
+            background: #fff;
+            padding: 15px;
+            border-left: 4px solid #2ecc71;
+            border-radius: 5px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .testimonial img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #2ecc71;
+            object-fit: cover;
+        }
+        .testimonial h4 {
+            font-size: 16px;
+            margin: 10px 0 5px;
+            color: #2ecc71;
+        }
+        .testimonial p {
+            font-size: 14px;
+            color: #666;
+        }
+        .faq .faq-item {
+            background: #f1f1f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .leaderboard-table th, .leaderboard-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .leaderboard-table th {
+            background: #3498db;
+            color: #fff;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            padding: 10px;
+            background: #3498db;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background: #2980b9;
+        }
+        .bitcoin-payment {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+        .bitcoin-address {
+            font-family: monospace;
+            background: linear-gradient(90deg, #f1c40f, #e67e22);
+            color: #1a3c5e;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            animation: float 2s ease-in-out infinite;
+            transition: box-shadow 0.3s ease;
+        }
+        .bitcoin-address:hover {
+            box-shadow: 0 0 15px rgba(241, 196, 15, 0.7);
+        }
+        .floating-five {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 0 0 5px #ffd700, 2px 2px 10px #ffec8b, -2px -2px 15px #f4e600, 0 0 20px #fff9a3;
+            animation: glitterShine 1.5s ease-in-out infinite alternate, float 2s ease-in-out infinite;
+            z-index: 1;
+            box-shadow: 0 0 10px #ffd700, 0 0 20px #ffec8b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: rgba(255, 215, 0, 0.1);
+        }
+        @keyframes glitterShine {
+            0% { text-shadow: 0 0 5px #ffd700, 2px 2px 10px #ffec8b, -2px -2px 15px #f4e600, 0 0 10px #fff9a3; box-shadow: 0 0 10px #ffd700, 0 0 15px #ffec8b; }
+            50% { text-shadow: 0 0 10px #ffd700, 3px 3px 15px #ffec8b, -3px -3px 20px #f4e600, 0 0 15px #fff9a3; box-shadow: 0 0 15px #ffd700, 0 0 25px #ffec8b; }
+            100% { text-shadow: 0 0 15px #ffd700, 2px 2px 20px #ffec8b, -2px -2px 25px #f4e600, 0 0 20px #fff9a3; box-shadow: 0 0 20px #ffd700, 0 0 30px #ffec8b; }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        footer {
+            background: #1a3c5e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+                flex-wrap: wrap;
+            }
+            .logo h1 {
+                font-size: 24px;
+            }
+            .logo img {
+                width: 40px;
+                height: 40px;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                margin: 10px 0;
+                font-size: 14px;
+            }
+            .hero {
+                min-height: 400px;
+                background-attachment: scroll;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .timer {
+                font-size: 18px;
+            }
+            .signup-option, .global-entry-option {
+                padding: 12px 24px;
+                margin-top: 15px;
+            }
+            .signup-option a, .global-entry-option a {
+                font-size: 14px;
+            }
+            .cell {
+                margin: 15px;
+                padding: 15px;
+            }
+            .cell h3 {
+                font-size: 20px;
+            }
+            .cell p {
+                font-size: 14px;
+            }
+            .testimonials {
+                padding: 20px;
+            }
+            .group-image {
+                max-width: 100%;
+            }
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            .leaderboard-table th, .leaderboard-table td {
+                padding: 8px;
+                font-size: 14px;
+            }
+            .bitcoin-payment {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .bitcoin-address {
+                font-size: 14px;
+                padding: 5px 8px;
+            }
+            .floating-five {
+                font-size: 24px;
+                top: -20px;
+                right: 10px;
+                padding: 5px 8px;
+            }
+            footer {
+                padding: 15px;
+                font-size: 12px;
+            }
+            footer a {
+                margin: 0 5px;
+                font-size: 12px;
+            }
+            .disclaimer {
+                font-size: 10px;
+            }
+        }
+
+        /* Tablet Adjustments */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .navbar {
+                padding: 12px 25px;
+            }
+            .logo h1 {
+                font-size: 26px;
+            }
+            .nav-links a {
+                margin-left: 20px;
+                font-size: 15px;
+            }
+            .hero h2 {
+                font-size: 34px;
+            }
+            .hero p {
+                font-size: 17px;
+            }
+            .cell {
+                margin: 20px;
+                padding: 20px;
+            }
+            .cell h3 {
+                font-size: 22px;
+            }
+            .testimonial-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+            .floating-five {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/b4/c3/d7/b4c3d7a75177b17fc70dce1bf802cda1.jpg" alt="Giveaway Hub Logo">
+            <h1>Giveaway Hub</h1>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">?</div>
+        <div class="nav-links" id="navLinks">
+            <a href="#how-it-works">How It Works</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#terms">Terms</a>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Official $1000 Visa Giveaway 2025</h2>
+            <p>Enter Now - Ends May 4, 2025 | <span class="timer" id="countdown"></span></p>
+            <div class="signup-option">
+                <a href="https://www.tmcdeas4dx.com/2JDGKGQW/HCHLW4K/">Enter with Email (US Residents 18+)</a>
+            </div>
+            <div class="global-entry-option">
+                <a href="#global-entry">Global Entry with Bitcoin</a>
+            </div>
+        </div>
+    </div>
+    <div class="cell" id="how-it-works">
+        <h3>How It Works</h3>
+        <p>1. Submit your email to register for a free entry (US residents 18+).</p>
+        <p>2. For global participation, pay a $5 entry fee via Bitcoin (details below).</p>
+        <p>3. Winners are notified by email within 7 days after the deadline.</p>
+    </div>
+    <div class="cell">
+        <h3>Prize Details</h3>
+        <p><strong>Grand Prize:</strong> $1,000 Visa Gift Card (1 winner).</p>
+        <p><strong>Eligibility:</strong> US residents 18+ for free entry; global entries via $5 BTC payment.</p>
+        <p><strong>Deadline:</strong> May 4, 2025, 11:59 PM EST.</p>
+    </div>
+    <div class="cell" id="global-entry">
+        <h3>Global Entry with Bitcoin</h3>
+        <p>Non-US participants can join by paying a $5 entry fee in Bitcoin. Follow these steps:</p>
+        <div class="bitcoin-payment">
+            <div>
+                <p>Send exactly $5 USD worth of BTC to:</p>
+                <p class="bitcoin-address">bc1q39ysrjf6hq4y9ftzdzpapz5a80km7hpklts3lf</p>
+            </div>
+            <span class="floating-five">$5</span>
+        </div>
+        <p>After payment, email <a href="mailto:giveawayhub2025@proton.me">giveawayhub2025@proton.me</a> with your transaction ID and full name to confirm your entry. Note: BTC value is based on the exchange rate at the time of payment.</p>
+    </div>
+    <div class="cell testimonials" id="testimonials">
+        <h3>What Our Winners Say</h3>
+        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Group of Winners" class="group-image">
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Jessica Martinez">
+                <h4>Jessica Martinez</h4>
+                <p>"Received my $1,000 Visa card promptly—amazing experience!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Michael Thompson">
+                <h4>Michael Thompson</h4>
+                <p>"Easy BTC entry and won $500—highly recommend!"</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=60" alt="Steven Wright">
+                <h4>Steven Wright</h4>
+                <p>"Seamless process, won big with the global option!"</p>
+            </div>
+        </div>
+    </div>
+    <div class="cell">
+        <h3>Leaderboard</h3>
+        <table class="leaderboard-table">
+            <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Prize</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Jessica M.</td>
+                <td>$1,000 Visa</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Michael T.</td>
+                <td>$500 Visa</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Steven W.</td>
+                <td>$500 Google Pay</td>
+            </tr>
+        </table>
+    </div>
+    <div class="cell" id="contact">
+        <h3>Contact Us</h3>
+        <div class="contact-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+    <div class="cell faq" id="faq">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+            <h4>Who can participate?</h4>
+            <p>US residents 18+ can enter for free via email. Global users can join with a $5 BTC payment.</p>
+        </div>
+        <div class="faq-item">
+            <h4>How do I claim my prize?</h4>
+            <p>Winners will receive an email with instructions within 7 days after May 4, 2025.</p>
+        </div>
+    </div>
+    <footer id="terms">
+        <p>© 2025 Giveaway Hub. All rights reserved. | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+        <p class="disclaimer">This promotion is conducted in compliance with local laws. No purchase necessary to enter in the US. Void where prohibited. Sponsored by Giveaway Hub LLC.</p>
+    </footer>
+
+    <script>
+        // Countdown timer to May 4, 2025, 11:59 PM EST
+        const countdownDate = new Date("May 4, 2025 23:59:00 EST").getTime();
+        const timerElement = document.getElementById("countdown");
+
+        const updateCountdown = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timerElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                timerElement.textContent = "Giveaway Ended";
+            }
+        }, 1000);
+
+        // Toggle mobile menu
+        function toggleMenu() {
+            const navLinks = document.getElementById("navLinks");
+            navLinks.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
